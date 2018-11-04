@@ -1,6 +1,8 @@
 import java.util.*;
 
-
+/**
+ * @author: Sarah Amick
+ */
 public class Apriori {
 	/***
 	 * The TRANSACTIONS 2-dimensional array holds the full data set for the lab
@@ -29,8 +31,6 @@ public class Apriori {
 
             System.out.println("...found " + frequentItemSets.size());
         }
-        // TODO: create association rules from the frequent itemsets
-
         return finalFrequentItems;
     }
 
@@ -44,7 +44,6 @@ public class Apriori {
                 if(newItem!=null) candidateSets.put(newItem, 0);
             }
         }
-        //TODO: check here if all subsets of 'item' appear in the log of frequent items?
         Hashtable<ItemSet, Integer> frequentItemSets = new Hashtable<>();
         for(ItemSet item : candidateSets.keySet()){
             int itemCount = countSupport(item.set);

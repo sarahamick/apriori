@@ -4,17 +4,14 @@ import java.util.List;
 
 /***
  * The ItemSet class is used to store information concerning a single transaction.
- * Should not need any changes.
- *
  */
 public class ItemSet {
-	
+
 	/***
 	 * The PRIMES array is internally in the ItemSet-class' hashCode method
 	 */
 	private static final int[] PRIMES = { 2, 3, 5, 7, 11, 13, 17, 23, 27, 31, 37 };
     final int[] set;
-
     /***
      * Creates a new instance of the ItemSet class.
      * @param set Transaction content
@@ -36,7 +33,7 @@ public class ItemSet {
         return code;
     }
 
-    
+
     @Override
     /**
      * Used to determine whether two ItemSet objects are equal
